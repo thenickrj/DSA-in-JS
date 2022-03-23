@@ -41,28 +41,13 @@ function revStr(string) {
   let start = 0;
   let end = string.length - 1;
   let temp;
-  if (string.length === 1) {
-    return string;
-  }
-  console.log(string[13]);
 
-  if (string.length % 2 === 0) {
-    while (start !== end - 1) {
-      temp = string[start];
-      string[start] = string[end];
-      string[end] = temp;
-      start++;
-      end--;
-    }
-  } else {
-    while (start < end) {
-      temp = string[start];
-      string[start] = string[end];
-      string[end] = temp;
-      start++;
-      end--;
-    }
+  while (start < end) {
+    temp = string[start];
+    string[start] = string[end];
+    string[end] = temp;
+    start++;
+    end--;
   }
-  //   console.log(string);
-  //   return string;
+  return string;
 }
