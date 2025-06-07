@@ -16,3 +16,14 @@ function reversing(arr) {
 
   return arr;
 }
+
+function reverseArray(arr) {
+  let start = 0,
+    end = arr.length - 1;
+  while (start < end) {
+    [arr[start], arr[end]] = [arr[end], arr[start]]; // Cleaner swap
+    start++;
+    end--;
+  }
+  return arr;
+}
